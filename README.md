@@ -1,6 +1,6 @@
-# ToDo アプリケーション
+# demo アプリケーション
 
-ReactとLaravelで構築されたToDoアプリケーション。
+ReactとLaravelを繋ぎこむ検証です
 
 ## プロジェクト構造
 
