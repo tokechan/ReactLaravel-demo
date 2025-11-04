@@ -100,6 +100,7 @@ php artisan serve --host=127.0.0.1 --port=8787
 ```bash
 docker-compose up --build
 ```
+※ 初回ビルド後は `docker-compose up -d`（バックグラウンド起動）で十分。コードはホスト側を編集するとコンテナに反映される
 
 - ブラウザアクセス
   - フロントエンド: http://localhost:5173
