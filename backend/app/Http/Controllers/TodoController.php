@@ -64,7 +64,7 @@ class TodoController extends Controller
      */
     public function toggleCompleted(Todo $todo)
     {
-        $todo->completed = !$tod0->completed;
+        $todo->completed = !$todo->completed;
         $todo->save();
         return $todo;
     }
