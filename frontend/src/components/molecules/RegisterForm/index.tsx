@@ -4,12 +4,19 @@ import { useAuth } from '../../../contexts/AuthContext';
 
 // スタイル付きコンポーネント
 const FormContainer = styled.div`
-  max-width: 400px;
+  width: 100%;
+  max-width: 420px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 28px 32px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   background-color: white;
+  box-sizing: border-box;
+
+  @media (max-width: 480px) {
+    max-width: 100%;
+    padding: 24px 20px;
+  }
 `;
 
 const Title = styled.h2`
@@ -36,10 +43,13 @@ const Label = styled.label`
 
 const Input = styled.input`
   width: 100%;
-  padding: 10px;
+  padding: 12px 14px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
+  line-height: 1.4;
+  box-sizing: border-box;
+  min-height: 44px;
   &:focus {
     outline: none;
     border-color: #4a90e2;
@@ -75,6 +85,12 @@ const SwitchText = styled.p`
   text-align: center;
   margin-top: 15px;
   color: #666;
+  font-size: 14px;
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
 `;
 
 const SwitchLink = styled.span`
@@ -183,7 +199,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
         </Button>
       </Form>
       <SwitchText>
-        すでにアカウントをお持ちの方は{' '}
+        <span>すでにアカウントをお持ちの方は</span>{' '}
         <SwitchLink onClick={onSwitchToLogin}>ログイン</SwitchLink>
       </SwitchText>
     </FormContainer>

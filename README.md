@@ -1,4 +1,4 @@
-# demo アプリケーション
+# React ± Laravel デモアプリケーション
 
 ReactとLaravelを繋ぎこむ検証です
 
