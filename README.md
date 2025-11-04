@@ -55,6 +55,10 @@ php artisan migrate
 php artisan serve
 ```
 
+- テスト用ログイン情報
+  - メールアドレス: `test@example.com`
+  - パスワード: `password`
+
 ## 開発環境
 
 - フロントエンド: http://localhost:5173

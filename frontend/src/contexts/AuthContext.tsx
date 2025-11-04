@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { User, AuthState, AuthAction } from '../types/auth';
+import { mockUsers } from '../config/mockUsers';
 
 // 初期状態
 const initialState: AuthState = {
@@ -125,12 +126,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       await new Promise(resolve => setTimeout(resolve, 500));
       
       // モックログイン - 後でAPIに置き換え
-      if (email === 'test@example.com' && password === 'password') {
-        const user = {
-          id: '1',
-          username: 'testuser',
-          email: 'test@example.com',
-        };
+      const matchedUser = mockUsers.find(
+        (mockUser) => mockUser.email === email && mockUser.password === password
+      );
+      
+      if (matchedUser) {
+        const { password: _password, ...user } = matchedUser;
         
         // ログイン成功
         console.log('ログイン成功:', user);
