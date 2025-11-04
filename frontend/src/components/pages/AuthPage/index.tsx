@@ -10,7 +10,11 @@ const Container = styled.div`
   align-items: center;
   min-height: 100vh;
   background-color: #f5f7fa;
-  padding: 20px;
+  padding: 40px 32px;
+
+  @media (min-width: 768px) {
+    padding: 60px 120px;
+  }
 `;
 
 export const AuthPage: React.FC = () => {
