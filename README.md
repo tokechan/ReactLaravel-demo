@@ -1,4 +1,4 @@
-# React + Laravel デモアプリケーション
+# React + Laravel + Docker デモアプリケーション
 
 フロントエンド（React）とバックエンド（Laravel API）を Docker コンテナでまとめて立ち上げる構成を検証するためのデモアプリケーション。
 単体での手動起動手順も併記。
